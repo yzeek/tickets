@@ -7,6 +7,7 @@ import { ExpirationCompleteListener } from './events/listeners/expiration-ceompl
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 const initialize = async () => {
     console.log(' starting orders.')
+
     if (!process.env.JWT_KEY) throw new Error('JWT_KEY is required')
     if (!process.env.MONGO_URI) throw new Error('JWT_KEY is required')
     if (!process.env.NATS_CLIENT_ID) throw new Error("NATS_CLIENT_ID must be defined");
