@@ -6,7 +6,11 @@ import { natsWrapper } from './nats-wrapper';
 import { ExpirationCompleteListener } from './events/listeners/expiration-ceomplete-listener';
 import { PaymentCreatedListener } from './events/listeners/payment-created-listener';
 const initialize = async () => {
+<<<<<<< HEAD
     console.log(' starting orders.')
+=======
+    console.log(' starting')
+>>>>>>> aa3fef3f2a63c97ae488e2770cb336edd93b2800
     if (!process.env.JWT_KEY) throw new Error('JWT_KEY is required')
     if (!process.env.MONGO_URI) throw new Error('JWT_KEY is required')
     if (!process.env.NATS_CLIENT_ID) throw new Error("NATS_CLIENT_ID must be defined");
