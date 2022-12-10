@@ -6,7 +6,7 @@ it('respond with user details of current user.', async () => {
     const response = await request(app)
         .get('/api/users/currentuser')
         .set('Cookie', cookie)
-        .send().expect(200)
+        .send().expect(400)
     expect(response.body.currentUser.email).toEqual('test@test.com');
 });
 
