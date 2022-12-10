@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { app } from './app'
 const initialize = async () => {
-  console.log('starting message ')
+  console.log('starting message 2 ')
   if (!process.env.JWT_KEY) throw new Error('JWT_KEY is required')
   if (!process.env.MONGO_URI) throw new Error('MONGO_URI is required')
 
