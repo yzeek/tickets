@@ -6,7 +6,7 @@ const buildClient = ({ req }) => {
 
     return axios.create({
       baseURL:
-        "http://microservices.ic-digitalmarketing.com",
+        "http://microservices.ic-digitalmarketing.com/",
       headers: req.headers,
     });
   } else {
