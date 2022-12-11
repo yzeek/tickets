@@ -1,11 +1,10 @@
 import { OrderCreatedListener } from '../order-created-listener';
 import { Ticket } from '../../../models/ticket';
-import { OrderCreatedEvent, OrderStatus } from '@yzk-tickets/ticketingcore';
+import { OrderCreatedEvent, OrderStatus, OrderCancelledEvent } from '@yzk-tickets/ticketingcore';
 import mongoose from 'mongoose';
 import { Message } from 'node-nats-streaming';
 import { natsWrapper } from '../../../nats-wrapper';
 import { OrderCancelledListener } from '../order-cancelled-listener';
-import { OrderCancelledEvent } from '../../../../../common/build/events/order-cancelled-event';
 
 const setup = async () => {
     // Create an instance of the listener
