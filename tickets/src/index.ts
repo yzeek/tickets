@@ -5,6 +5,7 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 import { natsWrapper } from './nats-wrapper';
 
 const initialize = async () => {
+    console.log(' starting tickets.')
 
     if (!process.env.JWT_KEY) throw new Error('JWT_KEY is required')
     if (!process.env.MONGO_URI) throw new Error('JWT_KEY is required')
