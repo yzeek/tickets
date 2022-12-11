@@ -6,7 +6,7 @@ const buildClient = ({ req }) => {
 
     return axios.create({
       baseURL:
-        "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
+        "http://microservices.ic-digitalmarketing.com",
       headers: req.headers,
     });
   } else {
