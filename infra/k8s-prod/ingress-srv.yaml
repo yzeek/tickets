@@ -86,7 +86,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
-    - host: www.YOUR_DOMAIN_NAME
+    - host: www.micro.ic-digitalmarketing.com
       http:
         paths:
           - path: /api/payments/?(.*)
@@ -130,7 +130,7 @@ kind: Service
 metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.YOUR_DOMAIN_NAME"
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "www.micro.ic-digitalmarketing.com"
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
