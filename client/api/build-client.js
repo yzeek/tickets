@@ -4,6 +4,7 @@ const buildClient = ({ req }) => {
   if (typeof window === "undefined") {
     // We are on the  server
 
+
     return axios.create({
       baseURL:
         "http://microservices.ic-digitalmarketing.com",
