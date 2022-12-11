@@ -10,13 +10,6 @@ spec:
     - host: microservices.ic-digitalmarketing.com
       http:
         paths:
-          - path: /api/payments/?(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: payments-srv
-                port:
-                  number: 3000
           - path: /api/users/?(.*)
             pathType: Prefix
             backend:
@@ -24,6 +17,14 @@ spec:
                 name: auth-srv
                 port:
                   number: 3000
+          - path: /api/payments/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: payments-srv
+                port:
+                  number: 3000
+
           - path: /api/tickets/?(.*)
             pathType: Prefix
             backend:
@@ -51,7 +52,7 @@ kind: Service
 metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-    service.beta.kubernetes.io/do-loadbalancer-hostname: microservices.ic-digitalmarketing.com
+    service.beta.kubernetes.io/do-loadbalancer-hostname: "microservices.ic-digitalmarketing.com"
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
