@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@yzeek 
-Blickhan
-/
-ticketing
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-ticketing/infra/k8s-prod/ingress-srv.yaml
-@Blickhan
-Blickhan define ingress class
-Latest commit 0c50bdf on Sep 16, 2021
- History
- 1 contributor
-79 lines (79 sloc)  2.05 KB
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
