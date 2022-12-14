@@ -63,10 +63,10 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
 spec:
-  tls:
-    - hosts:
-        - www.lpai.spiush.com
-      secretName: ssl-certificate
+  # tls:
+  #   - hosts:
+  #       - www.lpai.spiush.com
+  #     secretName: ssl-certificate
   rules:
     - host: www.lpai.spiush.com
       http:
