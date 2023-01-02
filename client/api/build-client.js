@@ -7,7 +7,7 @@ const buildClient = ({ req }) => {
 
     return axios.create({
       baseURL:
-        "http://www.zeappie.spiush.com",
+        "http://www.lpai.spiush.com",
       //   'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
       headers: req.headers,
     });
